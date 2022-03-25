@@ -27,6 +27,12 @@ connection.once("open", () =>{
 const equipmentRouter = require("./routes/equipment.js");
 app.use("/equipment",equipmentRouter);
 
+const travelPackageRouter=require("./routes/travelPackage.js");
+app.use("/travelpackages",travelPackageRouter);
+
+const packageBookingRouter=require("./routes/Packagebooking.js");
+app.use("/packagebooking",packageBookingRouter);
+
 
 
 app.listen(PORT, () =>{
