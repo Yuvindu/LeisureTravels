@@ -27,6 +27,8 @@ connection.once("open", () =>{
 const equipmentRouter = require("./routes/equipment.js");
 app.use("/equipment",equipmentRouter);
 
+const paymentRouter = require("./routes/payments.js");
+app.use(paymentRouter);
 
 
 app.listen(PORT, () =>{
