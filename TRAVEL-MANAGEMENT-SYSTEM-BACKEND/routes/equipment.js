@@ -4,7 +4,7 @@ const multer = require("multer")
 
 const storage=multer.diskStorage({
     destination:(req,file,callback)=>{
-        callback(null,"../.");
+        callback(null,"../TRAVEL_MANAGEMENT-SYSTEM-FRONTEND/public/uploads");
     },
     filename:(req,file,callback)=>{
         callback(null,file.originalname);
