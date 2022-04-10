@@ -6,7 +6,7 @@ const router =express.Router();
 
 const storage=multer.diskStorage({
     destination:(req,file,callback)=>{
-        callback(null,"../Travel-management-Frontend/public/uploads");
+        callback(null,"../TRAVEL_MANAGEMENT-SYSTEM-FRONTEND/public/uploads");
     },
     filename:(req,file,callback)=>{
         callback(null,file.originalname);
@@ -26,7 +26,7 @@ router.post('/admin/add', upload.single("packageImage") ,(req,res)=>{
         noofnights:req.body.noofnights, 
         vehical:req.body.vehical,
         perperson:req.body.perperson,
-        packageImage:req.file.originalname,
+        packageImage:req.file.originalname
     });
     newTravelPackage
     .save()
