@@ -13,6 +13,8 @@ import AddEquipment from './components/Travel_Equipments/AddEquipment';
 import AdminEquipment from './components/Travel_Equipments/AdminEquipment';
 import UserEquipment from './components/Travel_Equipments/UserEquipment';
 import EquipmentReport from './components/Travel_Equipments/EquipmentReport'
+import HomePage from './components/HomePage';
+import AdminHome from  './components/AdminHome';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
 
@@ -39,6 +41,8 @@ function App() {
       <Route path ="/equipment/admin" exact component={AdminEquipment}/>
       <Route path ="/equipment" exact component={UserEquipment}/>
       <Route path ="/equipment/report" exact component={EquipmentReport}/>
+      <Route path ="/" exact component={HomePage}></Route>
+      <Route path="/adminhome" exact component={AdminHome}/>
       
   
     </div>
