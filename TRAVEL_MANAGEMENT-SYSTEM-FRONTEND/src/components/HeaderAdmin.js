@@ -21,7 +21,7 @@ function HeaderAdmin() {
             class="headerad"
             style={{ fontSize: "17px", color: "black", paddingTop: "15px" }}
           >
-            <b>Dream Travelers</b>
+            <b>Leisure Travelers</b>
           </h2></center>
           <li>
             <a href="/adminhome">
@@ -35,18 +35,8 @@ function HeaderAdmin() {
           </li>
 
           <li>
-            <a href="/adminhotelpackage">
-              <i class="fa fa-hotel" aria-hidden="true"></i> Room Package
-            </a>
-          </li>
-          <li>
             <a href="/activities">
               <i class="fa fa-swimmer" aria-hidden="true"></i> Activity
-            </a>
-          </li>
-          <li>
-            <a href="/guide">
-              <i class="fa fa-user" aria-hidden="true"></i> Guide
             </a>
           </li>
 
@@ -55,27 +45,19 @@ function HeaderAdmin() {
               <i class="fa fa-campground" aria-hidden="true"></i> Equipment
             </a>
           </li>
+
           <li>
             <a href="/feedbacks/admin">
               <i class="fa fa-comments" aria-hidden="true"></i> FeedBack
             </a>
           </li>
-          <li>
-            <a href="/adView">
-              <i class="fa fa-inbox" aria-hidden="true"></i> Inquiry
-            </a>
-          </li>
+         
           <li>
             <a href="/contactus/admin">
               <i class="fa fa-envelope" aria-hidden="true"></i> Messages
             </a>
           </li>
-          <li>
-            <a href="/get">
-              <i class="fa fa-user" aria-hidden="true"></i> User
-              Management
-            </a>
-          </li>
+         
           <li>
             <a href="/payment">
               <i class="fa fa-cc-visa" aria-hidden="true"></i> Payment
@@ -95,7 +77,7 @@ function HeaderAdmin() {
               }}
             >
               {" "}
-              Dream Travelers Admin DashBord
+              Leisure Travelers Admin Dash Board
             </h1>
           </div>
 

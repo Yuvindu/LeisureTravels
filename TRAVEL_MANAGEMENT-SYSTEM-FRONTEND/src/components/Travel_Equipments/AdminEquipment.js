@@ -5,8 +5,8 @@ import { Card } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 //import pb from '../../Images/pb.jpg'
-//import '../../Styles/TravelEquipment.css'
-//import HeaderAdmin from '../HeaderAdmin'
+import '../../Styles/TravelEquipment.css'
+import HeaderAdmin from '../HeaderAdmin'
 
 const AdminEquipment = () => {
     const [equipments, setEquipment] = useState([]);
@@ -31,7 +31,7 @@ const AdminEquipment = () => {
     const { id } = useParams();
     return (
       <div>
-        
+        <HeaderAdmin/>        
         <div className="infoadmin">
       <div className="TEcenter">
       <div style={{paddingRight:"100px", paddingTop:"10px"}}><Link class="btn btn-primary mr-2" to="/equipment/report" style={{float:"right"}}>

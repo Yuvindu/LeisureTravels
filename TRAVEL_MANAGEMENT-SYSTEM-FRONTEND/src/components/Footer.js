@@ -10,10 +10,10 @@ function Footer() {
           <div className="col">
             <h4>Visit Us</h4>
             <h6 className="list-unstyled">
-              <li>26/D</li>
-              <li>Malabe</li>
-              <li>Kaduwela</li>
+              <li>62/A</li>
+              <li>Bambalapitiya</li>
               <li>Colombo</li>
+              <li>Sri Lanka</li>
             </h6>
           </div>
           {/* Column2 */}
@@ -31,9 +31,8 @@ function Footer() {
             <h4>Services</h4>
             <h6 className="list-unstyled">
               <li><a href="/travelpackages" >Trip Packages</a> </li>
-              <li><a href="/hotelpackage" >Rooms Packages</a></li>
-              <li><a href="/all" >Activity</a></li>
               <li><a href="/equipment" >Equipments</a></li>
+              <li><a href="/all" >Activity</a></li>
             </h6>
           </div>
         </div>
@@ -63,7 +62,7 @@ function Footer() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
-            &copy;{new Date().getFullYear()} Dream Travelers | All rights
+            &copy;{new Date().getFullYear()} Leisure Travelers | All rights
             reserved | Terms Of Service | Privacy
           </p>
 
@@ -104,7 +103,7 @@ function Footer() {
                     </div>
                     <div class="col-md-6">
                         <div class="text-white mt-4"> <span class="intro-1 ftintro-1">Do not Copy Right</span>
-                            <div class="mt-2"> <span class="intro-2">Our Dream Travel Company website do not copy. Website copywriting is the process of writing digital content for landing pages, product pages, blog posts, and everything in between. Compelling copy can keep your website visitors engaged and lead them to take actions that are both important to you and meaningful to them.</span> </div>
+                            <div class="mt-2"> <span class="intro-2">Our Leisure Travel Company website do not copy. Website copywriting is the process of writing digital content for landing pages, product pages, blog posts, and everything in between. Compelling copy can keep your website visitors engaged and lead them to take actions that are both important to you and meaningful to them.</span> </div>
                             <div class="mt-4 mb-5"> <button class="btn ftbtn-primary btn-primary"  data-dismiss="modal"><i class="fa fa-close"></i> Close</button> </div>
                         </div>
                     </div>

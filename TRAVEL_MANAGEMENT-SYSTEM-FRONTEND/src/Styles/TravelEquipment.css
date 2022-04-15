@@ -1,3 +1,12 @@
 .TEcenter{
     margin-inline-start: 5%;
 }
+
+.infoEq {
+    color: #252525;
+  
+    margin-inline-start: 220px;
+    margin-right: 25px;
+    min-height: 500px;
+    margin-top:120px ;
+  }

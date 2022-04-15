@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios'
 import ReactToPrint from "react-to-print";
-//import HeaderAdmin from '../HeaderAdmin'
+import HeaderAdmin from '../HeaderAdmin'
 
 class ComponentToPrint extends React.Component{
   constructor(props){
@@ -26,7 +26,7 @@ class ComponentToPrint extends React.Component{
   render() {
     return (
       <div>
-        
+        <HeaderAdmin/>       
       <div className="infoadmin">
       <ReactToPrint
           trigger={() => <button style={{marginRight:"100px", float:"right"}}>Print this out!</button> }

@@ -3,8 +3,9 @@ import axios from 'axios';
 import { Card } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-//import Header from '../Header';
-//import Footer from '../Footer';
+import Header from '../Header';
+import Footer from '../Footer';
+
 
 
 export default class CardItemsT extends Component{
@@ -49,9 +50,9 @@ handleSearchArea=(e)=>{
 render(){
   return(
     <div>
-      
+      <Header/>      
       <div style={{backgroundColor:"hsl(0,0%,75%,0.2)"}}>
-    <div className="infotr">
+    <div className="infoEq">
     <div className="bodytravelpackage" id="bbimg">
     <div >
       <br/>
@@ -131,7 +132,7 @@ render(){
     </div>
     </div>
     </div>
-    
+    <Footer/>    
     </div>
   )
 }

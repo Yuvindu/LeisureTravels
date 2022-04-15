@@ -24,7 +24,7 @@ const data = [
 
   {
     src: imag3,
-    caption: "Dabulla Temple",
+    caption: "Temple Of Tooth Relic",
   },
 
   {
@@ -39,7 +39,7 @@ const data = [
 
   {
     src: imag6,
-    caption: "Jungle Beach",
+    caption: "Nuwara Eliya",
   },
 
   {
@@ -175,7 +175,7 @@ export default class HomePage extends Component {
               to travel more and more.
               <br />
               <br />
-              The benefits you can gain from using Dream travelers web app, to
+              The benefits you can gain from using Leisure travelers web app, to
               start with, your agent will help you choose the right places to
               go. It can be difficult if not misleading to read travel reviews
               posted online. A travel agent knows what is a truly good – and

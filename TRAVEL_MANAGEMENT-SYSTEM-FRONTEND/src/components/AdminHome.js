@@ -43,28 +43,7 @@ function AdminHome() {
                               class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
                               type="submit"
                             >
-                              <a
-                                href="/get"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "black",
-                                }}
-                              >
-                                {" "}
-                                <i
-                                  class="fa fa-user mr-2"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                User Management{" "}
-                              </a>
-                            </button>
-                          </div>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <div class="form-outline mb-2 ">
-                            <button
-                              class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
-                              type="submit"
-                            >
+                              
                               <a
                                 href="/travelpackages/admin"
                                 style={{
@@ -87,29 +66,7 @@ function AdminHome() {
                               class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
                               type="submit"
                             >
-                              <a
-                                href="/adminhotelpackage"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "black",
-                                }}
-                              >
-                                {" "}
-                                <i
-                                  class="fa fa-hotel mr-2"
-                                  aria-hidden="true"
-                                ></i>
-                                Hotel Package
-                              </a>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center mb-5">
-                          <div class="form-outline mb-2 ">
-                            <button
-                              class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
-                              type="submit"
-                            >
+                              
                               <a
                                 href="/activities"
                                 style={{
@@ -154,28 +111,7 @@ function AdminHome() {
                               class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
                               type="submit"
                             >
-                              <a
-                                href="/guide"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "black",
-                                }}
-                              >
-                                {" "}
-                                <i
-                                  class="fa fa-user mr-2"
-                                  aria-hidden="true"
-                                ></i>
-                                Guide Management
-                              </a>
-                            </button>
-                          </div>
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          <div class="form-outline mb-2 ">
-                            <button
-                              class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
-                              type="submit"
-                            >
+                              
                               <a
                                 href="/payment"
                                 style={{
@@ -200,27 +136,7 @@ function AdminHome() {
                               class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
                               type="submit"
                             >
-                              <a
-                                href="/feedbacks/admin"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "black",
-                                }}
-                              >
-                                <i
-                                  class="fa fa-comments mr-2"
-                                  aria-hidden="true"
-                                ></i>
-                                FeedBack Messages
-                              </a>
-                            </button>
-                          </div>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <div class="form-outline mb-2 ">
-                            <button
-                              class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
-                              type="submit"
-                            >
+                             
                               <a
                                 href="/contactus/admin"
                                 style={{
@@ -239,24 +155,7 @@ function AdminHome() {
                           </div>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <div class="form-outline mb-2 ">
-                            <button
-                              class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
-                              type="submit"
-                            >
-                              <a
-                                href="/adView"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "black",
-                                }}
-                              >
-                                <i
-                                  class="fa fa-inbox mr-2"
-                                  aria-hidden="true"
-                                ></i>
-                                Inquiry
-                              </a>
-                            </button>
+                         
                           </div>
                         </div>
                         <hr class="my-1" />

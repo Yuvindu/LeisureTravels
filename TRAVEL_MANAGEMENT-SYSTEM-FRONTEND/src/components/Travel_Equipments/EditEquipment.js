@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
-//import HeaderAdmin from '../HeaderAdmin'
+import HeaderAdmin from '../HeaderAdmin'
 
 const EditEquipment = () => {
   let history = useHistory();
@@ -34,7 +34,7 @@ const EditEquipment = () => {
   };
   return (
     <div>
-        
+        <HeaderAdmin/>        
     <div className="infoadmin">
     <div className="container" style={{paddingTop:"100px"}}>
 

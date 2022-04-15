@@ -1,7 +1,7 @@
 import React,{useReducer, useState} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
-//import HeaderAdmin from '../HeaderAdmin'
+import HeaderAdmin from '../HeaderAdmin'
 
 const AddEquipment = ()=>{
 
@@ -44,7 +44,7 @@ const AddEquipment = ()=>{
    };
     return (
       <div>
-        
+        <HeaderAdmin/>       
       <div className="infoadmin">
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
