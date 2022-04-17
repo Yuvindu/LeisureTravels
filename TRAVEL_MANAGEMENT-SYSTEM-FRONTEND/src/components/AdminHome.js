@@ -10,7 +10,7 @@ function AdminHome() {
 
       <div
         style={{
-          backgroundColor: "hsla(90, 100%, 89%, 0.55)",
+          backgroundColor: "#DCF5FE",
         }}
       >
         <div id="bodyadd">
@@ -21,7 +21,7 @@ function AdminHome() {
                   class="row"
                   style={{
                     backgroundImage:
-                      "url('https://img.freepik.com/free-vector/brick-wall-with-spot-lights-background_23-2148606997.jpg?size=626&ext=jpg')",
+                      "url('https://www.teahub.io/photos/full/282-2828960_abstract-triangle-wallpaper.jpg')",
                   }}
                 >
                   <div class="col-lg-10 col-xl-auto mx-auto">

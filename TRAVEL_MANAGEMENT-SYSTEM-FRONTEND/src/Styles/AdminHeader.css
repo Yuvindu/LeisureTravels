@@ -8,13 +8,13 @@
   background: #283048; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
-    #4392d3,
-    #4f4ea3
+    #536976,
+    #292E49
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to left,
-    #329dc4,
-    #212f80
+    #536976,
+    #292E49
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: rgb(255, 255, 255);
@@ -38,13 +38,13 @@
   background: #232526; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #353638,
-    #424344
+    #536976,
+    #536976
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #3f3f41,
-    #383a3a
+    #536976,
+    #536976
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -52,13 +52,13 @@
   background: #232526; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #414345,
-    #232526
+    #536976,
+    #292E49
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #414345,
-    #232526
+    #536976,
+    #292E49
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-size: cover;
