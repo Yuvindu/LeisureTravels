@@ -90,7 +90,7 @@ export default function DeleteTravelPackage() {
         style={{
           backgroundImage:
             "url('https://www.teahub.io/photos/full/236-2363274_wallpapers-v-old-world-map-4k.jpg')",
-          minHeight: "600px",
+          minHeight: "850px",
         }}
       >
         <div className="Appxx">

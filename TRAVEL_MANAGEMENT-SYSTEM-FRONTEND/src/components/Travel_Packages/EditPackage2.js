@@ -102,8 +102,8 @@ const EditTPackage = (props) => {
         className="infoadmin"
         style={{
           backgroundImage:
-            "url('https://www.teahub.io/photos/full/236-2363540_world-map-travel-background.jpg')",
-          minHeight: "600px",
+            "url('https://www.teahub.io/photos/full/236-2363540_world-map-travel-background.jpg')", paddingBottom: "600px",
+          minHeight: "850px",
         }}
       >
         <div className="container">

@@ -63,7 +63,7 @@ export default class AllPackagesAdmin extends Component {
           className="infoadmin"
           style={{
             backgroundImage:
-              "url('https://www.teahub.io/photos/full/236-2363274_wallpapers-v-old-world-map-4k.jpg')",
+              "url('https://www.teahub.io/photos/full/236-2363274_wallpapers-v-old-world-map-4k.jpg')", paddingBottom: '450px'
           }}
         >
           <div className="container">
