@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import Header from "../Header";
-//import Footer from "../Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 import AddRating from './PackageAddRating';
 
 export default class PackageDetails extends Component {
@@ -41,11 +41,11 @@ export default class PackageDetails extends Component {
 
     return (
       <div className="boodydetails">
-        
+        <Header/>
         <div className="infotr boodydetails">
           <div className="container">
             <div className={{paddingBottom:"10px"}}><hr/></div>
-            <ul class="postcard__tagbox" style={{ fontSize: "16px" ,marginTop:"40px" }}>
+            <ul class="postcard__tagbox" style={{ fontSize: "16px" ,marginTop:"40px"}}>
               <li>
                 <small class="text-muted" style={{ marginInlineStart: "2%"}}>
                   <button
@@ -176,7 +176,7 @@ export default class PackageDetails extends Component {
             </div>
           </div>
         </div>
-        
+        <Footer/>
       </div>
     );
   }

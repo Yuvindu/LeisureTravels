@@ -2,7 +2,7 @@ import React, { useReducer, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "../../Styles/TravelPackage.css";
-//import HeaderAdmin from "../HeaderAdmin";
+import HeaderAdmin from "../HeaderAdmin";
 
 const CreatePackage = () => {
   let history = useHistory();
@@ -57,7 +57,7 @@ const CreatePackage = () => {
   };
   return (
     <div>
-      
+      <HeaderAdmin/>
 
       <div className="infoadmin">
         <div className="bodyaa" id="bodytbc">
@@ -180,14 +180,14 @@ const CreatePackage = () => {
                   <div class="horizontal-group horizontal-grouptr">
                     <div class="form-group form-grouptr left">
                       <lable class="label-title">
-                        <b>Vehical *</b>
+                        <b>Vehicle *</b>
                       </lable>
                       <input
                         type="text"
                         required="required"
                         name="vehical"
                         class="form-input"
-                        placeholder="vehical"
+                        placeholder="vehicle"
                         value={vehical}
                         onChange={(e) => setVehical(e.target.value)}
                       />

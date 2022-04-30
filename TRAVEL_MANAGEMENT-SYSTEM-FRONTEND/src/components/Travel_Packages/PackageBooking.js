@@ -2,9 +2,9 @@ import React, { useReducer, useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Form,Button,Col,Row,InputGroup } from "react-bootstrap";
-//import "../../Styles/TravelPackage.css";
-//import Header from "../Header";
-//import Footer from "../Footer";
+import "../../Styles/TravelPackage.css";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const PackageBooking = () => {
 
@@ -89,10 +89,10 @@ else{
   const { packageName, perperson } = tpackage;
   return (
     <div>
-      
+      <Header/>
       <div className="infotr">
         <hr/>
-        <div className="bodyaa" style={{ paddingTop: "10px" }}>
+        <div className="bodyaa" style={{ paddingTop: "100px", marginLeft:"170px", }}>
           <div className="bodybb">
             <div className="container">
               <div className="w-70 mx-auto shadow p-3">
@@ -281,7 +281,7 @@ else{
           <br />
         </div>
       </div>
-      
+      <Footer/>
     </div>
   );
 };

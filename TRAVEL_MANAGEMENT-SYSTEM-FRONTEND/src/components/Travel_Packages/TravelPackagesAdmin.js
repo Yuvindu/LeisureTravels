@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import "../../Styles/TravelPackage.css";
+import "../../Styles/TravelPackage.css";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-//import HeaderAdmin from "../HeaderAdmin";
+import HeaderAdmin from "../HeaderAdmin";
 export default class AllPackagesAdmin extends Component {
   constructor(props) {
     super(props);
@@ -58,12 +58,12 @@ export default class AllPackagesAdmin extends Component {
   render() {
     return (
       <div>
-        
+        <HeaderAdmin/>
         <div
           className="infoadmin"
           style={{
             backgroundImage:
-              "url('https://www.teahub.io/photos/full/236-2363540_world-map-travel-background.jpg')",
+              "url('https://www.teahub.io/photos/full/236-2363274_wallpapers-v-old-world-map-4k.jpg')",
           }}
         >
           <div className="container">
