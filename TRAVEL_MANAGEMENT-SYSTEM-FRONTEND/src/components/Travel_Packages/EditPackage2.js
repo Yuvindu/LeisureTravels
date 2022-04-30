@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams, useHistory } from "react-router-dom";
-//import "../../Styles/TravelPackage.css";
-//import HeaderAdmin from "../HeaderAdmin";
+import "../../Styles/TravelPackage.css";
+import HeaderAdmin from "../HeaderAdmin";
 
 const EditTPackage = (props) => {
   const [tpackage, viewPackage] = useState({});
@@ -96,7 +96,7 @@ const EditTPackage = (props) => {
 
   return (
     <div>
-      
+      <HeaderAdmin/>
 
       <div
         className="infoadmin"

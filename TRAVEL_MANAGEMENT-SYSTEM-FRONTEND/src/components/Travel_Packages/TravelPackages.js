@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Button, Row } from "react-bootstrap";
-//import "../../Styles/TravelPackage.css";
-//import Header from "../Header";
-//import Footer from "../Footer";
+import "../../Styles/TravelPackage.css";
+import Header from "../Header";
+import Footer from "../Footer";
 import Reactstars from "react-rating-stars-component";
 
 export default class CardItemsT extends Component {
@@ -52,7 +52,7 @@ export default class CardItemsT extends Component {
   render() {
     return (
       <div>
-        
+        <Header/>
         <div className="infotr bodytravelpackage">
           <div className="bodytravelpackage container" id="bbimg">
             <div>
@@ -271,8 +271,9 @@ export default class CardItemsT extends Component {
             </div>
           </div>
         </div>
-        
+      <Footer/>
       </div>
+      
     );
   }
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams, useHistory } from "react-router-dom";
 import "../../Styles/TravelPackage.css";
-//import HeaderAdmin from "../HeaderAdmin";
+import HeaderAdmin from "../HeaderAdmin";
 
 const PackageDetailsAdmin = () => {
   const [tpackage, viewPackage] = useState({
@@ -40,13 +40,13 @@ const PackageDetailsAdmin = () => {
 
   return (
     <div>
-      
+      <HeaderAdmin/>
 
       <div
         className="infoadmin"
         style={{
           backgroundImage:
-            "url('https://www.teahub.io/photos/full/236-2363540_world-map-travel-background.jpg')",
+            "url('https://www.teahub.io/photos/full/236-2363274_wallpapers-v-old-world-map-4k.jpg')",
           minHeight: "600px",
         }}
       >
