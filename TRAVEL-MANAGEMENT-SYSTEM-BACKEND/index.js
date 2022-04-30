@@ -39,6 +39,9 @@ app.use("/packagebooking",packageBookingRouter);
 const TravlPackagereviewRoutes = require('./routes/TravelPackageRating');
 app.use('/travelpackage/review', TravlPackagereviewRoutes);
 
+const contactUsRouter = require("./routes/ContactUs");
+app.use("/contactus",contactUsRouter);
+
 
 
 app.listen(PORT, () =>{

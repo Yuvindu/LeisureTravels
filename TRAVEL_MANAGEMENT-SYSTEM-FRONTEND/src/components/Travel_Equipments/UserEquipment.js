@@ -52,7 +52,7 @@ render(){
     <div>
       <Header/>      
       <div style={{backgroundColor:"hsl(0,0%,75%,0.2)"}}>
-    <div className="infoEq">
+    <div className="infotr">
     <div className="bodytravelpackage" id="bbimg">
     <div >
       <br/>

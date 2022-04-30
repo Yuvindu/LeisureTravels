@@ -10,7 +10,7 @@ function AdminHome() {
 
       <div
         style={{
-          backgroundColor: "#DCF5FE",
+          backgroundColor: "#DCF5FE", paddingTop: "50px" , paddingBottom: "70px"
         }}
       >
         <div id="bodyadd">
@@ -18,13 +18,13 @@ function AdminHome() {
             <div>
               <div class="container">
                 <div
-                  class="row"
+                  class="row container"
                   style={{
                     backgroundImage:
-                      "url('https://www.teahub.io/photos/full/282-2828960_abstract-triangle-wallpaper.jpg')",
+                      "url('https://www.teahub.io/photos/full/282-2828960_abstract-triangle-wallpaper.jpg')", paddingTop: "50px", paddingBottom: "100px"
                   }}
                 >
-                  <div class="col-lg-10 col-xl-auto mx-auto">
+                  <div class="col-lg-10 col-xl-auto mx-auto" style={{paddingTop: "130px"}}>
                     <div
                       class="card flex-row my-3 border-5 shadow rounded-5 overflow-hidden"
                       style={{ backgroundColor: "hsla(90, 0%, 100%, 0.7)" }}
