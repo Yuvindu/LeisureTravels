@@ -20,6 +20,13 @@ import Aboutus from './components/AboutUs';
 import ContactUs from './components/Contactus';
 import ContactUsAdmin from './components/ContactUsAdmin';
 import Services from './components/Services';
+import AllPayments from './components/Payment/AllPayments';
+import EditPayment from './components/Payment/EditPayment';
+import PaymentDetails from  './components/Payment/PaymentDetails';
+import PayForEquipment from './components/Payment/PayForEquipment';
+import PayForTP from './components/Payment/PayForTP';
+import PaymentConfirm from './components/Payment/PaymentComplete';
+import PaymentView from './components/Payment/PayView';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
 
@@ -52,7 +59,14 @@ function App() {
       <Route path="/aboutus" exact component={Aboutus}/>
       <Route path="/contactus" exact component ={ContactUs}/>
       <Route path="/contactus/admin" exact component ={ContactUsAdmin}/>
+      <Route path="/payment/add-equipment/:id" exact component ={PayForEquipment}/>
       <Route path="/services" exact component = {Services}/>
+      <Route path="/payment/add-package/:id" exact component={PayForTP}/>
+      <Route path="/payment/" exact component={AllPayments}/>
+      <Route path="/payment/edit/:id" exact component={EditPayment}/>
+      <Route path="/payment/details/:id" exact component={PaymentDetails}/>
+      <Route path="/confirm/payment/" exact component={PaymentConfirm}/>
+      <Route path="/payment/view/" exact component={PaymentView}/>
       
   
     </div>
