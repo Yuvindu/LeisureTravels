@@ -42,6 +42,9 @@ app.use('/travelpackage/review', TravlPackagereviewRoutes);
 const activityRouter = require("./routes/Activity");
 app.use("/activities",activityRouter);
 
+const activityuserRouter = require("./routes/ActivityUser");
+app.use("/activityselect",activityuserRouter);
+
 const contactUsRouter = require("./routes/ContactUs");
 app.use("/contactus",contactUsRouter);
 

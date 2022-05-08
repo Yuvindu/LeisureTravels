@@ -1,220 +1,242 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import HeaderAdmin from "../HeaderAdmin";
+import React, { useReducer, useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
- 
-const EditActivity = (props) => {
-  const [aname, setActivityName] = useState("");
-  const [category, setCategory] = useState("");
-  const [mindescription, setMindescription] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
-  const [message, setMessage] = useState("");
-  const [fileName, setFileName] = useState("");
- 
-  const onChangeFile = (e) => {
-    setFileName(e.target.files[0]);
+import Header from "../Header";
+import Footer from "../Footer";
+import { Form, Button, Col, Row, InputGroup } from "react-bootstrap";
+
+const ActivitySelect = (props) => {
+  const [tactivity, viewActivity] = useState({
+    aname: "",
+    category: "",
+    mindescription: "",
+    description: "",
+    price: "",
+  });
+
+  const { id } = useParams();
+
+  const loadPackage = async () => {
+    const res = await axios.get(`http://localhost:8070/activities/${id}`);
+    viewActivity(res.data);
   };
- 
-  const changeOnClick = (e) => {
-    e.preventDefault();
- 
-    const formData = new FormData();
- 
-    formData.append("aname", aname);
-    formData.append("category", category);
-    formData.append("mindescription", mindescription);
-    formData.append("description", description);
-    formData.append("price", price);
-    formData.append("activityImage", fileName);
- 
-    setActivityName("");
-    setCategory("");
-    setMindescription("");
-    setDescription("");
-    setPrice("");
-    setFileName("");
- 
-    axios
-      .put(
-        `http://localhost:8070/activities/update/${props.match.params.id}`,
-        formData
-      )
-      .then((res) => setMessage(res.data))
-      .catch((err) => {
-        console.log(err);
-      });
-  };
- 
   useEffect(() => {
-    axios
-      .get(`http://localhost:8070/activities/${props.match.params.id}`)
-      .then((res) => [
-        setActivityName(res.data.aname),
-        setCategory(res.data.category),
-        setMindescription(res.data.mindescription),
-        setDescription(res.data.description),
-        setPrice(res.data.price),
-        setFileName(res.data.articleImage),
-      ])
-      .catch((error) => console.log(error));
-  }, []);
+    loadPackage();
+  });
+
+  let history = useHistory();
+
+  const [post, addPost] = useState({
+    aName: "",
+    aprice: "",
+    name: "",
+    phone: "",
+    content: "",
+  });
+  const { aName, aprice, name, phone, content } = post;
+
+  const onInputChange = (e) => {
+    addPost({ ...post, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const { aName, aprice, name, phone, content } = post;
+    const { aname, price } = tactivity;
+
+    const data = {
+      aName: aname,
+      aprice: price,
+      name: name,
+      phone: phone,
+      content: content,
+    };
+
+    await axios.post("http://localhost:8070/activityselect/add", data);
+    alert("Activity Select Successfull. Click Ok to Pay");
+    history.push(`/payment/add-activity/${props.match.params.id}`);
+  };
+
+  const { aname, price } = tactivity;
+
  
+
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
   return (
-    <div>
-      <div
-        className="background"
-        style={{
-          background:
-            "url(https://previews.123rf.com/images/wstockstudio/wstockstudio1707/wstockstudio170700176/82195391-accessories-for-travel-top-view-on-white-wooden-background-with-copy-space-adventure-and-wanderlust-.jpg)",
-        }}
-      >
-        <HeaderAdmin />
-        <AddActivityContainer>
-          <div className="info">
-            <div className="container" style={{ background: "#78866B" }}>
-              &nbsp;&nbsp;
-              <h1>Update Activity </h1>
-              <span className="message">{message}</span>
-              <form onSubmit={changeOnClick} encType="multipart/form-data">
-                <div className="form-group">
-                  <label htmlFor="aname">Activity Name</label>
-                  <input
-                    type="text"
-                    value={aname}
-                    onChange={(e) => setActivityName(e.target.value)}
-                    className="form-control"
-                    placeholder="Activity Name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="category">Category</label>
-                  <input
-                    type="text"
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    className="form-control"
-                    placeholder="Category"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="mindescription">Min Description</label>
-                  <textarea
-                    value={mindescription}
-                    onChange={(e) => setMindescription(e.target.value)}
-                    className="form-control"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="description">Description</label>
-                  <textarea
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    className="form-control"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="price">Price</label>
-                  <input
-                    type="text"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    className="form-control"
-                    placeholder="Price"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="file">Choose activity image</label>
-                  <input
-                    type="file"
-                    filename="activityImage"
-                    className="form-control-file"
-                    onChange={onChangeFile}
-                  />
-                </div>
-                <div className="flex-parent jc-center">
-                  <button type="submit" className="btnbb">
-                    Update Activity
-                  </button>
-                </div>
-                <div className="flex-parent jc-center">
-                  <Link
-                    to="/activities"
-                    type="submit"
-                    className="btnaa"
-                    style={{ color: "#000000" }}
+    <div
+      className="background"
+      style={{
+        background:
+          "url(https://thumbs.dreamstime.com/z/airplane-vacation-travel-items-wooden-background-table-73482629.jpg)",
+      }}
+    >
+      <div>
+        <Header />
+        <div className="infotr">
+          <div className="body" style={{ backgroundSize: "cover" }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div
+              className="bodybb"
+              style={{
+                background: "linear-gradient(90deg, #e2eafc 0%, #b6ccfe 100%)",
+              }}
+            >
+              <div className="container">
+                <div className="w-70 mx-auto shadow p-5">
+                  <div className="bodycc">
+                    <h2 className="text- mb-10" style={{ color: "#1b3b6f" }}>
+                      <b>Select Activity</b>
+                    </h2>
+                  </div>
+                  <hr />
+
+                  <Form
+                    noValidate
+                    validated={validated}
+                    onSubmit={(e) => onSubmit(e)}
                   >
-                    <i class="fas fa-hand-point-left">&nbsp;Back to Activity</i>
-                  </Link>
+                    <div class="row">
+                      <div class="col">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span
+                              class="input-group-text"
+                              id="basic-addon1"
+                              style={{
+                                backgroundColor: "hsl(0,0%,0%,0.3)",
+                                color: "white",
+                              }}
+                            >
+                              Activity Name
+                            </span>
+                          </div>
+
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="aName"
+                            value={aname}
+                            onChange={(e) => onInputChange(e)}
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span
+                              class="input-group-text"
+                              id="basic-addon1"
+                              style={{
+                                backgroundColor: "hsl(0,0%,0%,0.3)",
+                                color: "white",
+                              }}
+                            >
+                              Price
+                            </span>
+                          </div>
+
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="aprice"
+                            value={price}
+                            onChange={(e) => onInputChange(e)}
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="form-group">
+                      <label>
+                        <b>Name</b>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Your Name"
+                        name="name"
+                        value={name}
+                        onChange={(e) => onInputChange(e)}
+                        required
+                      />
+                      <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                      <Form.Control.Feedback type="invalid">
+                        Please Enter valid Number.
+                      </Form.Control.Feedback>
+                    </div>
+
+                    <div className="form-group">
+                      <label>
+                        <b>Phone</b>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Phone Number"
+                        name="phone"
+                        value={phone}
+                        onChange={(e) => onInputChange(e)}
+                        required
+                      />
+                      <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                      <Form.Control.Feedback type="invalid">
+                        Please provide a valid Number.
+                      </Form.Control.Feedback>
+                    </div>
+
+                    <div className="form-group">
+                      <label>
+                        <b>Quantity</b>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Qun:"
+                        name="content"
+                        value={content}
+                        onChange={(e) => onInputChange(e)}
+                        required
+                      />
+                      <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                      <Form.Control.Feedback type="invalid">
+                        Please provide a valid Name.
+                      </Form.Control.Feedback>
+                    </div>
+                    <br />
+
+                    <button
+                      type="submit"
+                      class="btn btn-block"
+                      style={{ background: "#9c89b8" }}
+                    >
+                      {" "}
+                      Select Now
+                    </button>
+                  </Form>
                 </div>
-                &nbsp;&nbsp;
-              </form>
+              </div>
             </div>
+            <br />
+            <br />
           </div>
-        </AddActivityContainer>
+        </div>
+        <Footer />
       </div>
     </div>
   );
 };
- 
-export default EditActivity;
- 
-//MAIN CONTAINER
-const AddActivityContainer = styled.div`
-  margin: 3rem auto;
-  padding: 4rem;
-  width: 75.25rem;
-  margin: 3rem auto;
-  padding: 4rem;
- 
-  h1 {
-    font-weight: 900;
-    text-align: center;
-  }
- 
-  .btnbb {
-    margin-top: 2rem;
-    background: #e5e4e2;
-    width: 8.25rem;
-    height: 2.25rem;
-    border: none;
-    &:hover {
-      background: #c9c0bb;
-      justify-content: center;
-    }
-  }
- 
-  .btnaa {
-    margin-top: 2rem;
-    background: #b6b6b4;
-    width: 8.25rem;
-    height: 2.25rem;
-    border: none;
-    &:hover {
-      background: #838996;
-      justify-content: center;
-    }
-  }
- 
-  .message {
-    font-weight: 900;
-    color: #cc0000;
-    padding: 1rem 1rem 1rem 0;
-  }
- 
-  h1 {
-    font-weight: 900;
-    color: #000000;
-  }
- 
-  .message {
-    font-weight: 900;
-    color: #cc0000;
-    padding: 1rem 1rem 1rem 0;
-  }
-`;
- 
 
+export default ActivitySelect;

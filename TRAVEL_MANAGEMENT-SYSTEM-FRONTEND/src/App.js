@@ -35,6 +35,7 @@ import AllActivity from './components/Activity/AllActivity';
 import ViewActivity from './components/Activity/ViewActivity';
 import ActivityDetails from './components/Activity/ActivityDetails';
 import ActivitySelect from './components/Activity/ActivitySelect';
+import ActivityUser from './components/Activity/ActivityUser';
 //import PayForActivity from './components/Payment/PayForActivity';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -84,7 +85,7 @@ function App() {
       <Route path="/add-activity" exact component={AddActivity} />
       <Route path="/activities" exact component={Activities} />
       <Route path="/activity-select" exact component={ActivitySelect} />
-      
+      <Route path="/activity-user/:id" exact component={ActivityUser} />
 
 
 
