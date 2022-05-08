@@ -35,7 +35,7 @@ function HeaderAdmin() {
           </li>
 
           <li>
-            <a href="/all">
+            <a href="/activities">
               <i class="fa fa-swimmer" aria-hidden="true"></i> Activity
             </a>
           </li>
