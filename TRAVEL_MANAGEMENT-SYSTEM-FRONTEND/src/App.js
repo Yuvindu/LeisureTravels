@@ -27,6 +27,15 @@ import PayForEquipment from './components/Payment/PayForEquipment';
 import PayForTP from './components/Payment/PayForTP';
 import PaymentConfirm from './components/Payment/PaymentComplete';
 import PaymentView from './components/Payment/PayView';
+import Activities from "./components/Activity/Activities";
+import Activity from "./components/Activity/Activity";
+import AddActivity from "./components/Activity/AddActivity";
+import EditActivity from "./components/Activity/EditActivity";
+import AllActivity from './components/Activity/AllActivity';
+import ViewActivity from './components/Activity/ViewActivity';
+import ActivityDetails from './components/Activity/ActivityDetails';
+import ActivitySelect from './components/Activity/ActivitySelect';
+//import PayForActivity from './components/Payment/PayForActivity';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
 
@@ -67,6 +76,21 @@ function App() {
       <Route path="/payment/details/:id" exact component={PaymentDetails}/>
       <Route path="/confirm/payment/" exact component={PaymentConfirm}/>
       <Route path="/payment/view/" exact component={PaymentView}/>
+      <Route path="/all" exact component = {AllActivity}/>
+      <Route path="/activity/:id" exact component = { Activity}/>
+      <Route path="/activity-details" exact component = {ActivityDetails}/>
+      <Route path="/view-activity/:id" exact component = {ViewActivity}/>
+      <Route path="/update/:id" exact component =  {EditActivity}/>
+      <Route path="/add-activity" exact component={AddActivity} />
+      <Route path="/activities" exact component={Activities} />
+      <Route path="/activity-select" exact component={ActivitySelect} />
+      
+
+
+
+
+
+
       
   
     </div>
